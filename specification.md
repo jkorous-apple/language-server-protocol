@@ -2181,6 +2181,17 @@ interface DidOpenTextDocumentParams {
 	 * The document that was opened.
 	 */
 	textDocument: TextDocumentItem;
+	/**
+	 * Data for processing not contained in the document itself.
+	 */
+	metadata?: TextDocumentMetadata;
+}
+
+interface TextDocumentMetadata {
+	/**
+	 * Compiler invocation command.
+	 */
+	compilationCommand?: string;
 }
 ```
 
